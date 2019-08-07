@@ -9,5 +9,5 @@ import { Agent } from './components/agent.model';
 })
 export class AppComponent {
   title = 'rma-test-app';
-  agents = dataJson.map(obj => new Agent(obj));
+  agents = dataJson.Results.map(obj => new Agent(obj));
 }
