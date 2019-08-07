@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as dataJson from '../assets/data.json';
+import { Agent } from './components/agent.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rma-test-app';
+  agents = dataJson.map(obj => new Agent(obj));
 }
