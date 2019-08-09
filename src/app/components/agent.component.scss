@@ -1,4 +1,96 @@
 .agent-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top: 35px solid #999999;
+    padding: 20px 20px;
+    border-radius: 3px;
+}
+
+.right-align {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.agent-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 20px;
+    text-align: center;
+
+    .icon-container {
+        width: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.agent-icon {
+    background: #e6e6e6;
+    height: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.agent-info {
+    vertical-align: middle;
+    text-align: center;
+    p { 
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: #808080;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+}
+
+button {
+    background-color: #0066ff; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 3px;
+    min-width: 132px;
+    max-width: 132px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+h3 {
+    margin: 5px 0px;
+    font-size: 1.8em;
+
+    sup {
+        font-size: 0.4em;
+    }
+}
+
+// Desktop specific styles
+@media only screen and (min-width: 1024px) {
+    .agent-container, .right-align {
+        flex-direction: row;
+    }
+
+    button {
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+    .agent-info {
+        text-align: left;
+        padding-left: 30px;
+    }
 }
