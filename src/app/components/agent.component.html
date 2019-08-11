@@ -1,8 +1,14 @@
 <div class="agent-container col-8">
     <img class = "agent-icon col-1" src="assets/avatar.png"/>
+
     <div *ngIf="agent.IsAwardWinner" class="agent-award">
       <img class="agent-award-image" src="assets/awards-badge.svg"/>
     </div>
+
+    <div *ngIf="agent.StarRating > 2" class="agent-rating">
+        <span><i class="fa fa-star"></i> {{agent.StarRating}}</span>
+    </div>
+    
     <div class="agent-info col-3">
       <h3>{{agent.Name}}</h3>
       <p>{{agent.Agency.Name}}</p>
